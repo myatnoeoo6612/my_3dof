@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="my_3dof">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0071002 0.018342 0.02437"
+        rpy="0 0 0" />
+      <mass
+        value="0.05861" />
+      <inertia
+        ixx="1.3349E-05"
+        ixy="3.4361E-21"
+        ixz="-7.2718E-08"
+        iyy="2.87E-05"
+        iyz="1.5817E-07"
+        izz="2.4567E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_3dof/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.69804 0.76863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_3dof/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_one">
+    <inertial>
+      <origin
+        xyz="-2.5119E-15 0.0515 -0.02475"
+        rpy="0 0 0" />
+      <mass
+        value="0.01653" />
+      <inertia
+        ixx="1.608E-05"
+        ixy="3.9461E-21"
+        ixz="-9.575E-21"
+        iyy="1.053E-05"
+        iyz="-9.5402E-20"
+        izz="7.2959E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_3dof/meshes/link_one.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.66667 0.69804 0.76863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_3dof/meshes/link_one.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_one"
+    type="revolute">
+    <origin
+      xyz="-3.003E-05 0.0285 0.05545"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_one" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0.8826"
+      velocity="5.236" />
+  </joint>
+  <link
+    name="link_two">
+    <inertial>
+      <origin
+        xyz="0.0012756 0.020682 -0.026415"
+        rpy="0 0 0" />
+      <mass
+        value="0.049807" />
+      <inertia
+        ixx="1.9795E-05"
+        ixy="1.0073E-07"
+        ixz="-1.5817E-07"
+        iyy="1.1806E-05"
+        iyz="7.2718E-08"
+        izz="1.2001E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_3dof/meshes/link_two.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_3dof/meshes/link_two.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_two"
+    type="revolute">
+    <origin
+      xyz="0 0.103 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_one" />
+    <child
+      link="link_two" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0.8826"
+      velocity="5.236" />
+  </joint>
+  <link
+    name="link_three">
+    <inertial>
+      <origin
+        xyz="0.0010603 0.010592 -0.026677"
+        rpy="0 0 0" />
+      <mass
+        value="0.039177" />
+      <inertia
+        ixx="1.1393E-05"
+        ixy="-4.7694E-21"
+        ixz="-1.5817E-07"
+        iyy="6.2722E-06"
+        iyz="7.2718E-08"
+        izz="7.9717E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_3dof/meshes/link_three.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_3dof/meshes/link_three.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_three"
+    type="revolute">
+    <origin
+      xyz="0 0.09497 -0.0007"
+      rpy="0 0 0" />
+    <parent
+      link="link_two" />
+    <child
+      link="link_three" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0.8826"
+      velocity="5.236" />
+  </joint>
+</robot>
